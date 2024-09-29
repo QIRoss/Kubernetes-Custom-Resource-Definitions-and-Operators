@@ -1,0 +1,8 @@
+apiVersion: yourcompany.com/v1
+kind: FastAPIDeployment
+metadata:
+  name: fastapi-app
+spec:
+  image: "qiross/fastapi-app:latest"
+  port: 8000
+  replicas: 2

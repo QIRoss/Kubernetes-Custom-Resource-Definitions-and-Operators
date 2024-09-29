@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fastapi-operator
+  template:
+    metadata:
+      labels:
+        app: fastapi-operator
+    spec:
+      containers:
+      - name: fastapi-operator
+        image: qiross/fastapi-operator:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+
