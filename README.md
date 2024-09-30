@@ -35,3 +35,11 @@ sudo k3s kubectl apply -f clusterrolebinding.yaml
 sudo k3s kubectl apply -f fastapi_crd.yaml
 sudo k3s kubectl apply -f deployment.yaml
 ```
+
+# Terraform
+AWS Terraform script basic server and agent
+```
+terraform init
+terraform plan -out=tfplan
+terraform apply tfplan
+```
